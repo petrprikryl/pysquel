@@ -51,10 +51,10 @@ def test_lint():
             result = lint(_sql)
             print(_sql)
             print("-" * 80)
-            if not result:
+            if not result.errors:
                 print("OK")
-            for item in result:
+            for item in result.errors:
                 print(item)
             print("=" * 80)
 
-            assert (is_good and not result) or (not is_good and result)
+            assert (is_good and not result.errors) or (not is_good and result.errors)

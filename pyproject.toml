@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "pysquel"
-version = "0.1.0"
+version = "0.0.1"
 description = ""
-authors = ["petr.prikryl <petr.prikryl@olc.cz>"]
+authors = ["petr.prikryl <nich@seznam.cz>"]
+readme = "README.md"
 packages = [
     {include = "pysquel", from = "src"},
 ]
@@ -10,7 +11,10 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.11"
 sqlfluff = "^2.3.5"
+typer = "^0.9.0"
 
+[tool.poetry.scripts]
+pysquel = 'pysquel.cli:app'
 
 [build-system]
 requires = ["poetry-core"]

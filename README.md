@@ -59,13 +59,11 @@ FROM
 """)
 ```
 
-`python src/pysquel/linter.py`
+Run `pysquel .` to lint all `sql` statements in the current directory:
 
 ```
 tests/test_lint.py :
 --------------------------------------------------------------------------------
-
-
   SELECT * 
 FROM 
           table
@@ -82,7 +80,6 @@ FROM
 ```
 
 ## TODO
-* CLI
 * config
 * exclude rules
 * exclude dirs

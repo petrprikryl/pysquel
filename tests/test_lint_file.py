@@ -10,7 +10,7 @@ expected = [
     [
         ("SELECT col FROM table", []),
         (
-            "\nSELECT * FROM table\n",
+            "SELECT * FROM table\n",
             [
                 {
                     "line_no": 1,
@@ -28,4 +28,4 @@ expected = [
 def test_lint_file():
     for i, sample in enumerate(samples):
         for e, result in enumerate(lint_file(sample)):
-            assert result == expected[i][e]
+            assert (result.sql, result.errors) == expected[i][e]
