@@ -46,6 +46,8 @@ It could be better **in the future**:
 
 ## Usage
 
+Install: `pip[x] install pysquel`
+
 ```python
 # tests/test_lint.py
 
